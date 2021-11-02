@@ -1,0 +1,5 @@
+This is test file 1
+it is a nice file
+even though sometimes, it contains non-alphanum chars
+GOSH!
+But that shouldn't be a problem.

@@ -1,3 +1,9 @@
+# Documentation:
+
+See `doc\intro.md`.
+
+# Original Requirements:
+
 ## Recipe search
 
 We have to give users the ability to search for recipes. We have some text files containing recipe descriptions written in English. We would like to be able to search over the set of these text files to find recipes given at a minimum a single word e.g. `tomato`.
@@ -23,13 +29,13 @@ Our requirements have been listed by a key business stakeholder:
 
 ## Technical Notes
 
-**Please use whichever language you are most comfortable in.** We want to see what your best work looks like, without needing to factor in a lack of familiarity with the language in our evaluation. We'll assume you chose the tools you know best. The program can be a command line app, a set of functions for REPL usage (or equivalent for your language) or a web app. 
+**Please use whichever language you are most comfortable in.** We want to see what your best work looks like, without needing to factor in a lack of familiarity with the language in our evaluation. We'll assume you chose the tools you know best. The program can be a command line app, a set of functions for REPL usage (or equivalent for your language) or a web app.
 
 The goal of this test is to appraise your programming ability, that is to say – how simple, readable, efficient and correct your solution is. In addition good comments, good function/interface design and good naming will be looked for.
 
 We have left the level of sophistication up to you, we find it is easier to make a naïve solution obviously simple, but as things get more sophisticated, keeping it simple is more challenging. We are interested in how you can do ‘hard’ things in a simple way.
 
--	Returning relevant results is fairly open ended and subjective, so there is a lot of room for increasing sophistication. 
+-	Returning relevant results is fairly open ended and subjective, so there is a lot of room for increasing sophistication.
 -	Performance / Resource utilisation is another area where you can apply more sophistication to the solution.
 -	Degree to which the solution is generalized without loss of clarity is another.
 
