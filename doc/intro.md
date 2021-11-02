@@ -6,7 +6,7 @@
 `$ cd recipe-search-tech-test` <br />
 `$ vim resources/config.edn`
 
-Note the last step is to configure `:dir-path` which is the directory where the recipe are located. <br />
+Note the last step is to configure `:dir-path` which is the directory where the recipe files are located. <br />
 
 As an alternative, recipe files can be placed in the `resources/testfiles` directory. <br />
 
