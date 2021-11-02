@@ -1,4 +1,4 @@
-# Riverford Search Documentation:
+# Riverford Search Documentation
 
 ## Installation
 
