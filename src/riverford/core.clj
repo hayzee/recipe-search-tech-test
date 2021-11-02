@@ -86,7 +86,7 @@
   "Main dialog. Can be run in the repl to prevent reindexing at start."
   []
   (println "\nWelcome to recipe search. \n")
-  (println "Enter a search query or .. ")
+  (println "Enter a search query or ..\n")
   (println ":r - reindex\n:m - display results as a map\n:n - display results normally\n:x - exit\n\n")
   (input-loop #'riverford.core/handler)
   (println "\n\nFarewell from recipe search.")
