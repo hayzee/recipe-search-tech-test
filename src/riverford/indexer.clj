@@ -102,12 +102,12 @@
 
 
 (defn term-idf
-  "Return the idf value for the given 'term from the index."
+  "Return the idf value for the given term from the index."
   [idx term]
   (get (:term-idf-map idx) term))
 
 
 (defn term-idfs
-  "Return the idfs value for the given 'terms from the index, returning a map of [term idf] pairs."
+  "Return the idfs value for the given terms from the index, returning a map of [term idf] pairs."
   [idx terms]
   (into {} (map #(vector % (term-idf idx %)) terms)))

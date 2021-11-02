@@ -16,19 +16,19 @@ To run the program ensure you are in the `recipe-search-tech-test` directory and
 
 `$ lein run`
 
-The program will index the recipe files first, then prompt for a search term.
+The program will index the recipe files first, then prompt for a search query.
 
-Either enter a search term or enter a command.
+Either enter a search query or enter a command.
 
 Valid commands are:
 
-`:r` or `:reindex`  - Re-indexes the directory (for instance, in the event of new files arriving).
+`:r` / `:reindex` - Re-indexes the directory (for instance, in the event of new files arriving).
 
-`:m` or `:map` - Switches to raw (i.e. displayed as a map) search results (to verify results).
+`:m` / `:map` - Switches to raw (i.e. displayed as a map) search results (to verify results).
 
-`:n` or `:normal` - Switches to normal, file-list search results.
+`:n` / `:normal` - Switches to normal, file-list search results.
 
-`:x` or `:exit`     - Exits the search system.
+`:x` / `:exit` - Exits the search system.
 
-`:q` or `:quit`     - As above.
+`:q` / `:quit` - As above.
 

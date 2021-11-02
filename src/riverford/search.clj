@@ -47,11 +47,12 @@
     (->>
       (find-terms idx terms)
       (map #(augment-search idx % terms))
-      (sort-by (juxt                                    ; Ranking is a composite sort.
-                 :tfidf-score                           ; High tf-idf values rank highest.
-                 #(reduce + (vals (:term-freqs %)))     ; sum of term frequencies.
-                 #(- (:token-count %))                  ; A lower token count will lift any result with an identical
-                                                        ; tfidf-score and term-freqs to another - an alternative would
-                                                        ; have been to use a weighted tf count (based on document length).
+      (sort-by (juxt                                    ; Ranking is a composite sort comprising:
+                 :tfidf-score                           ; - High tf-idf values rank highest.
+                 #(reduce + (vals (:term-freqs %)))     ; - Sum of term frequencies.
+                 #(- (:token-count %))                  ; - A lower token count will lift any result with an identical
+                                                        ;   tfidf-score and term-freqs to another - an alternative would
+                                                        ;   have been to use a weighted tf count (based on document
+                                                        ;   length).
                  ))
       reverse)))
