@@ -9,7 +9,7 @@
   "Reindexing dialog."
   [idx]
   (do
-    (print "Creating index ..... ")
+    (print "Creating index ... please wait ... ")
     (flush)
     (idx/store-index! idx (cfg/config :dir-path))
     (println "done!")))
@@ -18,21 +18,18 @@
 (defn- results-renderer
   "Render the results as a list of files."
   [results]
-  (println (count results) "results found ... ")
+  (println "Found" (count results) "results ... ")
   (doall (for [result (map :file results)]
            (println result)))
-  (println (count results) "results found ... ")
-  (println "End of result list"))
+  (println "... end of" (count results) "results."))
 
 
 (defn- rawmap-renderer
   "Render the results as a raw results map - useful for checking the results are correct."
   [results]
-  (do
-    (println (count results) "results found ... ")
-    (pp/pprint results)
-    (println (count results) "results found ... ")
-    (println "End of result list")))
+  (println "Found" (count results) "results ... ")
+  (pp/pprint results)
+  (println "... end of" (count results) "results."))
 
 
 (defn- search-handler
@@ -70,7 +67,7 @@
   "Main input loop handler."
   [handler]
   (loop []
-    (print "Search : ")
+    (print "\nSearch : ")
     (flush)
     (let [line (read-line)]
       (when (not (#{":exit" ":x" ":quit" ":q"} (.toLowerCase line)))
@@ -87,10 +84,10 @@
   []
   (println "\nWelcome to recipe search. \n")
   (println "Enter a search query or ..\n")
-  (println ":r - reindex\n:m - display results as a map\n:n - display results normally\n:x - exit\n\n")
+  (println ":r - reindex\n:m - display results as a map\n:n - display results normally\n:x - exit\n")
   (input-loop #'riverford.core/handler)
-  (println "\n\nFarewell from recipe search.")
-  (println "\nPlease visit us again soon."))
+  (println "\nFarewell from recipe search.")
+  (println "\nPlease visit us again soon.\n\n"))
 
 
 (defn -main
