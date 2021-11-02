@@ -1,8 +1,8 @@
-# Documentation:
+# Documentation
 
 See `doc\intro.md`.
 
-# Original Requirements:
+# Original Requirements
 
 ## Recipe search
 
