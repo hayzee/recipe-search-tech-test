@@ -2,11 +2,12 @@
 
 ## Installation
 
-`$ git clone http://hayzee/recipe-search-tech-test` <br />
+`$ git clone https://github.com/hayzee/recipe-search-tech-test.git` <br />
 `$ cd recipe-search-tech-test` <br />
 `$ vim resources/config.edn`
 
-Note the last step is to configure `:dir-path` which is the directory of the recipe files to be indexed. <br />
+Note the last step is to configure `:dir-path` which is the directory where the recipe are located. <br />
+
 As an alternative, recipe files can be placed in the `resources/testfiles` directory. <br />
 
 ## Usage
