@@ -6,12 +6,10 @@
 (def test-dir-path "resources/testfiles")
 (def test-idx (atom {}))
 
-
 (do
   (#'riverford.indexer/store-index! test-idx test-dir-path)
-  nil   ; suppress output
+  nil                                                       ; suppress output
   )
-
 
 (def test-file-1 "resources/testfiles/testfile1.txt")
 (def test-file-2 "resources/testfiles/testfile2.txt")
