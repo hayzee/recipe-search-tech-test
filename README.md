@@ -1,6 +1,6 @@
 # Documentation
 
-See `doc\intro.md`.
+See [`doc\intro.md`](https://github.com/hayzee/recipe-search-tech-test/blob/master/doc/intro.md).
 
 # Original Requirements
 
