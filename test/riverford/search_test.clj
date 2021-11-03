@@ -54,16 +54,13 @@
 
 
 (deftest augment-index-entry
-  (is (= {:file "X:\\Clojure\\riverford\\recipe-search-tech-test\\resources\\testfiles\\testfile1.txt",
-          :token-count 24,
+  (is (= {:token-count 24,
           :term-freqs {"file" 2, "sometimes" 1},
           :term-idfs {"file" 0.0, "sometimes" 0.6931471805599453},
           :term-tfidfs {"file" 0.0, "sometimes" 0.6931471805599453},
           :tfidf-score 0.0}
-         (#'riverford.search/augment-index-entry @test-idx test-index-entry ["file" "sometimes"]))
-      "Augmentation should eliminate unmatched terms-freqs and add entries for :term-idfs, :term-tfidfs and :tfidf-score")
-  )
-
+         (dissoc (#'riverford.search/augment-index-entry @test-idx test-index-entry ["file" "sometimes"]) :file))
+      "Augmentation should eliminate unmatched terms-freqs and add entries for :term-idfs, :term-tfidfs and :tfidf-score"))
 
 
 (deftest perform-search-test
